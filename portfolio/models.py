@@ -29,3 +29,11 @@ class Contact(models.Model):
     created_time= models.DateTimeField(auto_now_add=True)    
     def __str__(self):
         return f"you got message from {self.name}"      
+    
+class Certificate(models.Model):
+    name= models.CharField(max_length=255)
+    issued_by= models.CharField(max_length=255)
+    skill=models.CharField(max_length=255)
+    def __str__(self):
+        return self.name
+    
